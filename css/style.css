@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+/* CSS Document */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 12px;
+}
+img {
+    border: none;
+}
+li {
+    list-style: none;
+}
+input, select, textarea {
+    outline: none;
+    border: none;
+    background: none;
+}
+textarea {
+    resize: none;
+}
+a {
+    text-decoration: none;
+    color: #656565;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/*begin*/
+.test_title{
+    height:150px;
+    width:100%;
+    text-align: center;
+}
+.test_title span{
+    display: inline-block;
+     color: green;
+     font-size: 5em; 
+     ont-family: ´微软雅黑´;
+     background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#266), to(#3186D9));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+.test_footer{
+    height:150px;
+    width:100%;
+    text-align: center;
+}
+.test_footer span{
+    display: inline-block;
+     color: green;
+     font-size: 5em; 
+     ont-family: ´微软雅黑´;
+     background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#266), to(#3186D9));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.animated {
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+.container {
+    display: none;
+}
+.container.show {
+    display: block;
+}
+
+/* 覆盖页面 */
+.pageload-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.pageload-overlay.show {
+    visibility: visible;
+}
+.pageload-overlay svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.pageload-overlay svg path {
+    fill: #fff;
+}
+.pageload-overlay::after, .pageload-overlay::before {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: opacity 0.15s, visibility 0s 0.15s;
+    transition: opacity 0.15s, visibility 0s 0.15s;
+}
+.pageload-overlay::after {
+    background: #6cc88a;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-animation: moveRight 0.6s linear infinite alternate;
+    animation: moveRight 0.6s linear infinite alternate;
+}
+.pageload-overlay::before {
+    background: #4fc3f7;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-animation: moveLeft 0.6s linear infinite alternate;
+    animation: moveLeft 0.6s linear infinite alternate;
+}
+@-webkit-keyframes moveRight {
+    to {
+        -webkit-transform: translateX(20px);
+    }
+}
+@keyframes moveRight {
+    to {
+        transform: translateX(20px);
+    }
+}
+@-webkit-keyframes moveLeft {
+    to {
+        -webkit-transform: translateX(-20px);
+    }
+}
+@keyframes moveLeft {
+    to {
+        transform: translateX(-20px);
+    }
+}
+.pageload-loading.pageload-overlay::after, .pageload-loading.pageload-overlay::before {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+/* actGotop */
+.actGotop {
+    position: fixed;
+    _position: absolute;
+    bottom: 100px;
+    right: 50px;
+    width: 150px;
+    height: 195px;
+    display: none;
+}
+.actGotop a, .actGotop a:link {
+    width: 150px;
+    height: 195px;
+    display: inline-block;
+    background: url(../images/gotop.png) no-repeat;
+    _background: url(../images/gotop.gif) no-repeat;
+    outline: none;
+}
+.actGotop a:hover {
+    background: url(../images/gotopd.gif) no-repeat;
+    outline: none;
+}
+
+/*Main*/
+
+article h2 {
+    font-family: "å¾®è½¯é›…é»‘";
+    font-size: 60px;
+    margin: 25px 0;
+    line-height: 1em;
+    font-weight: 0
+}
+.story {
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+#first {
+    background: url("../images/WY_bg.png") 50% 0 no-repeat fixed;
+}
+#second {
+    background: url("../images/NGNL_bg.png") 50% 0 no-repeat fixed;
+}
+#fourth {
+    background: url("../images/BG _bg.png") 50% 0 no-repeat fixed;
+}
+#third {
+    background: url("../images/PJ_bg.png") 50% 0 no-repeat fixed;
+}
+#five {
+    background: url("../images/STM_bg.png") 50% 0 no-repeat fixed;
+}
+#theend {
+    background: url("../images/CG_bg.png") 50% 0 no-repeat fixed;
+}
+
+#first article {
+    width: 100%;
+    top: 300px;
+    position: absolute;
+    text-align: center;
+}
+#first article p{
+    color: #000;
+    font-size: 30px;
+}
+
+#first .WY_name {
+    background: url("../images/name.png") 50% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#first .WY_she {
+    background: url("../images/WY_down.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#second .NGNL_chess {
+    background: url("../images/chess.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#second article {
+    background: url("../images/grain.png") repeat #333;
+    width: 400px;
+    margin-left: 100px;
+    padding: 10px 20px;
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 1);
+    line-height: 1.5em;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(150, 150, 150, 0.1);
+}
+#second article p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#third article {
+    background: url("../images/grain.png") repeat #333;
+    color: #fff;
+    padding: 0px 20px;
+    margin: 30px 0 0 75%;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    line-height: 1.5em;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(150, 150, 150, 0.1);
+}
+#third .PJ_coin {
+    background: url("../images/PJ_coin.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#third article p {
+    width: 300px;
+    margin-bottom: 10px;
+}
+#fourth article {
+    margin-left: 5%;
+    text-shadow: 0 -1px 0 rgba(34, 114, 124, 0.5);
+    line-height: 1.5em;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    margin-top: 30px
+}
+#fourth article p {
+    width: 300px;
+    margin-left: 10px;
+}
+#fourth .leaf_01 {
+    background: url("../images/leaf01.png") 50% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_02 {
+    background: url("../images/leaf02.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_03 {
+    background: url("../images/leaf03.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_04 {
+    background: url("../images/leaf04.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_05 {
+    background: url("../images/leaf05.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_06 {
+    background: url("../images/leaf06.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_07 {
+    background: url("../images/leaf01.png") 50% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_08 {
+    background: url("../images/leaf02.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_09 {
+    background: url("../images/leaf03.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_10 {
+    background: url("../images/leaf04.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_11 {
+    background: url("../images/leaf05.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#fourth .leaf_12 {
+    background: url("../images/leaf06.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#five article {
+    background: url("../images/grain1.png") repeat #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 30px 0 0 60%;
+    text-shadow: 0 -1px 0 rgba(22, 22, 22, 0.1);
+    line-height: 1.5em;
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(150, 150, 150, 0.5);
+}
+#five .STM_Logo {
+    background: url("../images/STM_Logo.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#five .STM_words {
+    background: url("../images/STM_words.png") transparent 40% 100px no-repeat fixed;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#five article p {
+    width: 300px;
+}
+#five article a {
+    text-decoration: underline;
+}
+#five article a:hover {
+    cursor: pointer;
+    color: #066;
+}
+#theend .CG_photo {
+    background: url("../images/CG_photo.png") 40% 100px no-repeat fixed;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+#theend .byebye {
+    background: url("../images/theend.png") 40% 100px no-repeat fixed;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+/*m.html*/
+a {
+    color: #1abc9c;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.w {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    -moz-box-shadow: 5px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 5px 5px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+
+.col-md-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-md-8 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.nav-tabs {
+    border-bottom: 1px solid #dddddd;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    background-color: #ffffff;
+    border-left: 5px solid #1abc9c;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    width: 100%;
+}
+
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.428571429;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0 0 0 0;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.tab-content {
+    background-color: #ffffff;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+.tab-content h5 {
+    color: #bdc3c7;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
